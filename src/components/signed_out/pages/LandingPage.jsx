@@ -43,9 +43,8 @@ function LandingPage(props) {
             <Typography variant="h2" className={classes.homeTitle}>
               e-Luminous
               <Typography className={classes.homeDescription}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Doloremque quasi cupiditate tenetur eos doloribus assumenda
-                consectetur porro autem nemo
+                A progressive application for college students to submit their
+                lab experiments virtually
               </Typography>
             </Typography>
           </Grid>

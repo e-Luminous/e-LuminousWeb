@@ -12,7 +12,8 @@ const styles = theme => ({
   },
   button: {
     margin: ".5rem",
-    letterSpacing: "2px"
+    fontFamily: "Rubik",
+    fontWeight: "bold"
   },
   headerSection: {
     height: "80vh",
@@ -22,7 +23,7 @@ const styles = theme => ({
     }
   },
   homeTitle: {
-    marginTop: "2rem",
+    marginTop: "1rem",
     color: foregroundColor,
     fontFamily: "Sen",
     padding: "2rem",
