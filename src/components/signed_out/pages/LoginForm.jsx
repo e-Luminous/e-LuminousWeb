@@ -7,14 +7,15 @@ import {
   Typography,
   FormControl
 } from "@material-ui/core";
+import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import styles from "../styles/LoginPageStyle";
 import { withStyles } from "@material-ui/core/styles";
 
 function LoginForm(props) {
   const { classes } = props;
   return (
-    <main>
-      <Paper className={classes.paper}>
+    <main className={classes.main}>
+      <Paper className={classes.paper} variant="outlined">
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
@@ -40,7 +41,7 @@ function LoginForm(props) {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+            Log In
           </Button>
         </form>
       </Paper>

@@ -13,21 +13,42 @@ const styles = theme => ({
     fontFamily: "Rubik",
     fontWeight: "bold"
   },
-  loginImg: {
-    height: "auto",
-    marginTop: ".5rem",
-    width: "15rem",
+  main: {
+    width: "auto",
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
     [theme.breakpoints.up("sm")]: {
-      marginTop: "1rem",
-      width: "20rem"
+      width: "35rem",
+      marginLeft: "auto",
+      marginRight: "auto"
     },
     [theme.breakpoints.up("md")]: {
-      marginTop: "5rem",
-      width: "35rem"
+      width: "35rem",
+      marginLeft: theme.spacing(6),
+      marginRight: theme.spacing(6)
     }
   },
-  section: {
-    height: "100vh"
+  paper: {
+    marginTop: theme.spacing(8),
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    borderRadius: "10px",
+    padding: `${theme.spacing(2)}px ${theme.spacing(3)}px ${theme.spacing(3)}px`
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main
+  },
+  form: {
+    width: "100%",
+    marginTop: theme.spacing(3)
+  },
+  submit: {
+    fontFamily: "Rubik",
+    fontWeight: "bold",
+    padding: ".5rem",
+    marginTop: theme.spacing(3)
   }
 });
 

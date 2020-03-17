@@ -31,9 +31,6 @@ function Login(props) {
       <div className={classes.section}>
         <Grid container direction="row" justify="center" alignItems="center">
           <Grid item xs={12} md={6} lg={6}>
-            <img src={login_svg} alt="login" className={classes.loginImg} />
-          </Grid>
-          <Grid item xs={12} md={6} lg={6}>
             <LoginForm />
           </Grid>
         </Grid>
