@@ -14,6 +14,7 @@ import notification from "../img/notification.svg";
 import submit from "../img/submit.svg";
 import virtual_class from "../img/virtual_class.svg";
 import responsive from "../img/responsive.svg";
+import labsvg from "../img/labsvg.svg";
 
 function LandingPage(props) {
   const { classes } = props;
@@ -48,57 +49,93 @@ function LandingPage(props) {
               </Typography>
             </Typography>
           </Grid>
-        </Grid>
-      </div>
-      <div>
-        <Typography
-          variant="h3"
-          color="primary"
-          className={classes.featureHeading}
-        >
-          WHAT WE OFFER
-        </Typography>
-        <Grid container className={classes.bodySection}>
-          <Grid item xs={12} sm={6} md={4}>
-            <Paper className={classes.paper} variant="outlined">
-              <img
-                src={virtual_class}
-                alt="virtual"
-                className={classes.featureImg}
-              />
-              <Typography variant="h4" className={classes.featureName}>
-                Virtual Classroom
-              </Typography>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Paper className={classes.paper} variant="outlined">
-              <img src={submit} alt="submit" className={classes.featureImg} />
-              <Typography variant="h4">Easy Submission</Typography>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Paper className={classes.paper} variant="outlined">
-              <img
-                src={responsive}
-                alt="responsive"
-                className={classes.featureImg}
-              />
-              <Typography variant="h4">Responsiveness</Typography>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Paper className={classes.paper} variant="outlined">
-              <img
-                src={notification}
-                alt="notification"
-                className={classes.featureImg}
-              />
-              <Typography variant="h4">Notfication</Typography>
-            </Paper>
+          <Grid item xs={12} md={6} lg={6}>
+            <img
+              src={labsvg}
+              alg="labsvg"
+              alt="headingimg"
+              className={classes.headingImg}
+            />
           </Grid>
         </Grid>
       </div>
+
+      <Typography
+        variant="h3"
+        color="primary"
+        className={classes.featureHeading}
+      >
+        Features
+      </Typography>
+      <Grid
+        container
+        className={classes.bodySection}
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
+        <Grid item xs={12} sm={6} md={4}>
+          <Paper className={classes.paper} elevation={3}>
+            <img
+              src={virtual_class}
+              alt="virtual"
+              className={classes.featureImg}
+            />
+            <Typography variant="h4" className={classes.featureName}>
+              Virtual Classroom
+            </Typography>
+            <Typography variant="body1">
+              This application is a copy of google classroom where teachers can
+              create and students join the classroom through the unique code.
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Paper className={classes.paper} elevation={3}>
+            <img src={submit} alt="submit" className={classes.featureImg} />
+            <Typography variant="h4" className={classes.featureName}>
+              Easy Submission
+            </Typography>
+            <Typography variant="body1">
+              Students submit their lab assignment thorugh the application. So
+              they don't need to do the submission manually.
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Paper className={classes.paper} elevation={3}>
+            <img
+              src={responsive}
+              alt="responsive"
+              className={classes.featureImg}
+            />
+            <Typography variant="h4" className={classes.featureName}>
+              Responsiveness
+            </Typography>
+            <Typography variant="body1">
+              This applications is made with Material Design and made sure to be
+              responsive. It can be used in desktop, tab and any devices easily.
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Paper className={classes.paper} elevation={3}>
+            <img
+              src={notification}
+              alt="notification"
+              className={classes.featureImg}
+            />
+            <Typography variant="h4" className={classes.featureName}>
+              Notfication
+            </Typography>
+            <Typography variant="body1">
+              Students will get notification when the teacher assigns any
+              homework. So students won't miss anything and do the labwork on
+              time.
+            </Typography>
+          </Paper>
+        </Grid>
+      </Grid>
     </div>
   );
 }

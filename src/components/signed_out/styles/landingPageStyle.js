@@ -1,4 +1,4 @@
-import labsvg from "../img/labsvg.svg";
+const foregroundColor = "#487EDC";
 
 const styles = theme => ({
   root: {
@@ -15,14 +15,35 @@ const styles = theme => ({
     letterSpacing: "2px"
   },
   headerSection: {
-    height: "100vh",
-    background: `url(${labsvg}) no-repeat center center fixed`,
+    height: "80vh",
+    // background: `url(${labsvg}) no-repeat center center fixed`,
     [theme.breakpoints.up("md")]: {
       margin: theme.spacing(6)
     }
   },
-  featureHeading: {
+  homeTitle: {
+    marginTop: "2rem",
+    color: foregroundColor,
+    fontFamily: "Sen",
+    padding: "2rem",
     marginBottom: "2rem"
+  },
+  headingImg: {
+    height: "auto",
+    width: "15rem",
+    [theme.breakpoints.up("sm")]: {
+      width: "20rem"
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "28rem"
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "35rem"
+    }
+  },
+  featureHeading: {
+    marginBottom: "2rem",
+    fontFamily: "Sen"
   },
   labsvg: {
     height: "auto",
@@ -36,12 +57,10 @@ const styles = theme => ({
       maxWidth: "30rem"
     }
   },
-  homeTitle: {
-    marginTop: "12rem",
-    color: "#6200ea"
-  },
+
   homeDescription: {
-    color: "#212121"
+    color: "#212121",
+    letterSpacing: "2px"
   },
   paper: {
     padding: ".5rem",
@@ -49,11 +68,12 @@ const styles = theme => ({
     borderRadius: ".7rem"
   },
   featureImg: {
-    height: "auto",
-    maxWidth: "200px"
+    height: "200px",
+    maxWidth: "200px !important"
   },
   featureName: {
-    color: ""
+    color: "#487EDC",
+    marginBottom: "1rem"
   }
 });
 
