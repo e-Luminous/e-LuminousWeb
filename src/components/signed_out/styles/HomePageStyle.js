@@ -15,9 +15,11 @@ const styles = theme => ({
     fontFamily: "Rubik",
     fontWeight: "bold"
   },
+  btnLink: {
+    textDecoration: "none"
+  },
   headerSection: {
     height: "80vh",
-    // background: `url(${labsvg}) no-repeat center center fixed`,
     [theme.breakpoints.up("md")]: {
       margin: theme.spacing(6)
     }
