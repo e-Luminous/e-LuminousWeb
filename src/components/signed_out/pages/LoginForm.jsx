@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Paper,
   TextField,
   Avatar,
   Button,
   Typography,
-  FormControl
+  FormControl,
+  Grid
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import styles from "../styles/LoginPageStyle";
 import { withStyles } from "@material-ui/core/styles";
 
 function LoginForm(props) {
   const { classes } = props;
+
   return (
     <main className={classes.main}>
       <Paper className={classes.paper} variant="outlined">
@@ -27,22 +30,45 @@ function LoginForm(props) {
             <TextField
               required
               id="standard-required"
-              label="Required"
               variant="outlined"
               label="Email"
               autoFocus
             />
           </FormControl>
-
-          <Button
-            variant="contained"
-            type="submit"
-            fullWidth
-            color="primary"
-            className={classes.submit}
+          <FormControl margin="normal" required fullWidth>
+            <TextField
+              required
+              id="standard-required"
+              label="Password"
+              type="password"
+              autoComplete="current-password"
+              variant="outlined"
+            />
+          </FormControl>
+          <Grid
+            container
+            direction="row"
+            justify="space-between"
+            alignItems="baseline"
           >
-            Log In
-          </Button>
+            <Grid item>
+              <Link to="/register" className={classes.link}>
+                <Button color="primary" className={classes.newAccount}>
+                  Create new account
+                </Button>
+              </Link>
+            </Grid>
+            <Grid item>
+              <Button
+                variant="contained"
+                type="submit"
+                color="primary"
+                className={classes.submit}
+              >
+                Log In
+              </Button>
+            </Grid>
+          </Grid>
         </form>
       </Paper>
     </main>

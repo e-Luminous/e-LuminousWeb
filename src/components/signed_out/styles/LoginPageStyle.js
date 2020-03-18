@@ -38,7 +38,7 @@ const styles = theme => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main
+    backgroundColor: theme.palette.primary.main
   },
   form: {
     width: "100%",
@@ -47,8 +47,16 @@ const styles = theme => ({
   submit: {
     fontFamily: "Rubik",
     fontWeight: "bold",
-    padding: ".5rem",
     marginTop: theme.spacing(3)
+  },
+  newAccount: {
+    fontFamily: "Rubik",
+    fontWeight: "bold",
+    textTransform: "none",
+    marginTop: theme.spacing(3)
+  },
+  link: {
+    textDecoration: "none"
   }
 });
 

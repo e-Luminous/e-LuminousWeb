@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, Button, Grid } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import logo from "../img/logo.png";
-import login_svg from "../img/login.svg";
+import { Link } from "react-router-dom";
 import styles from "../styles/LoginPageStyle";
 import LoginForm from "./LoginForm";
 
@@ -12,7 +12,9 @@ function Login(props) {
     <div className={classes.root}>
       <AppBar position="static" color="transparent" className={classes.root}>
         <Toolbar>
-          <img src={logo} alt="logo" className={classes.logo} />
+          <Link to="/">
+            <img src={logo} alt="logo" className={classes.logo} />
+          </Link>
           <div className={classes.grow}></div>
 
           <Button color="primary" className={classes.button}>
