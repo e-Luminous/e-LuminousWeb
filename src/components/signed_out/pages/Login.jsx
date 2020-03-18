@@ -9,24 +9,27 @@ import LoginForm from "./LoginForm";
 function Login(props) {
   const { classes } = props;
   return (
-    <div className={classes.root}>
+    <>
       <AppBar position="static" color="transparent" className={classes.root}>
         <Toolbar>
-          <Link to="/">
+          <Link to="/" className={classes.link}>
             <img src={logo} alt="logo" className={classes.logo} />
           </Link>
           <div className={classes.grow}></div>
-
-          <Button color="primary" className={classes.button}>
-            Login
-          </Button>
-          <Button
-            color="primary"
-            variant="contained"
-            className={classes.button}
-          >
-            Register
-          </Button>
+          <Link to="/login" className={classes.link}>
+            <Button color="primary" className={classes.button}>
+              Login
+            </Button>
+          </Link>
+          <Link to="/register" className={classes.link}>
+            <Button
+              color="primary"
+              variant="contained"
+              className={classes.button}
+            >
+              Register
+            </Button>
+          </Link>
         </Toolbar>
       </AppBar>
 
@@ -37,7 +40,7 @@ function Login(props) {
           </Grid>
         </Grid>
       </div>
-    </div>
+    </>
   );
 }
 

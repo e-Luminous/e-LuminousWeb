@@ -3,7 +3,8 @@ const styles = theme => ({
     flexGrow: 1
   },
   logo: {
-    maxWidth: 160
+    maxWidth: 160,
+    marginTop: "5px"
   },
   grow: {
     flexGrow: 1
@@ -18,12 +19,12 @@ const styles = theme => ({
     marginLeft: theme.spacing(3),
     marginRight: theme.spacing(3),
     [theme.breakpoints.up("sm")]: {
-      width: "35rem",
+      width: "30rem",
       marginLeft: "auto",
       marginRight: "auto"
     },
     [theme.breakpoints.up("md")]: {
-      width: "35rem",
+      width: "30rem",
       marginLeft: theme.spacing(6),
       marginRight: theme.spacing(6)
     }
@@ -40,9 +41,10 @@ const styles = theme => ({
     margin: theme.spacing(1),
     backgroundColor: theme.palette.primary.main
   },
+
   form: {
     width: "100%",
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(4)
   },
   submit: {
     fontFamily: "Rubik",

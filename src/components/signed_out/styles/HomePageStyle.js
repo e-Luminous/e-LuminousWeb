@@ -8,7 +8,8 @@ const styles = theme => ({
     flexGrow: 1
   },
   logo: {
-    maxWidth: 160
+    maxWidth: 160,
+    marginTop: "5px"
   },
   button: {
     margin: ".5rem",

@@ -6,6 +6,8 @@ import {
   Button,
   Typography,
   FormControl,
+  FormControlLabel,
+  Checkbox,
   Grid
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
@@ -23,8 +25,9 @@ function LoginForm(props) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography variant="h5" className={classes.signIn}>
-          Sign In
+          Sign in
         </Typography>
+        <Typography variant="h6">to continue to e-Luminous</Typography>
         <form className={classes.form}>
           <FormControl margin="normal" required fullWidth>
             <TextField
@@ -45,6 +48,14 @@ function LoginForm(props) {
               variant="outlined"
             />
           </FormControl>
+          <Grid container>
+            <Grid item>
+              <FormControlLabel
+                control={<Checkbox value="loggedin" color="primary" />}
+                label="Keep me logged in"
+              />
+            </Grid>
+          </Grid>
           <Grid
             container
             direction="row"
