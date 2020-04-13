@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { auth } from "../../../utils/firebase";
 import {
   Paper,
   Avatar,
@@ -7,7 +8,7 @@ import {
   FormControlLabel,
   Checkbox,
   Grid,
-  Typography
+  Typography,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
@@ -16,6 +17,20 @@ import styles from "../styles/RegisterPageStyle";
 
 function RegisterForm(props) {
   const { classes } = props;
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onSubmithandler = async (e) => {
+    e.preventDefault();
+    try {
+      await auth.createUserWithEmailAndPassword(email, password);
+      console.log("success");
+    } catch (error) {
+      console.log(error);
+    }
+    console.log(e.target);
+  };
+
   return (
     <main className={classes.main}>
       <Paper className={classes.paper} variant="outlined">
@@ -26,7 +41,7 @@ function RegisterForm(props) {
           Sign up
         </Typography>
         <Typography variant="h6">to continue to e-Luminous</Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={onSubmithandler}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -60,6 +75,7 @@ function RegisterForm(props) {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -72,6 +88,7 @@ function RegisterForm(props) {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>

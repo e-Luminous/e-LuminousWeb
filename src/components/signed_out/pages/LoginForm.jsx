@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { auth } from "../../../utils/firebase";
 import {
   Paper,
   TextField,
@@ -8,7 +9,7 @@ import {
   FormControl,
   FormControlLabel,
   Checkbox,
-  Grid
+  Grid,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
@@ -17,8 +18,28 @@ import { withStyles } from "@material-ui/core/styles";
 
 function LoginForm(props) {
   const { classes } = props;
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  const onSubmithandler = async (e) => {
+    e.preventDefault();
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      console.log("entered");
+    } catch (error) {
+      console.log(error);
+    }
+    console.log(e.target);
+  };
   return (
+    // <>
+    //   <form onSubmit={onSubmithandler}>
+    //     <input type="text" onChange={(e) => setEmail(e.target.value)} />
+    //     <input type="password" onChange={(e) => setPassword(e.target.value)} />
+    //     {/* <button type="submit">submit</button> */}
+    //     <input type="submit" value="submit" />
+    //   </form>
+    // </>
     <main className={classes.main}>
       <Paper className={classes.paper} variant="outlined">
         <Avatar className={classes.avatar}>
@@ -28,7 +49,7 @@ function LoginForm(props) {
           Sign in
         </Typography>
         <Typography variant="h6">to continue to e-Luminous</Typography>
-        <form className={classes.form}>
+        <form className={classes.form} onSubmit={onSubmithandler}>
           <FormControl margin="normal" required fullWidth>
             <TextField
               required
@@ -36,6 +57,7 @@ function LoginForm(props) {
               variant="outlined"
               label="Email"
               autoFocus
+              onChange={(e) => setEmail(e.target.value)}
             />
           </FormControl>
           <FormControl margin="normal" required fullWidth>
@@ -46,6 +68,7 @@ function LoginForm(props) {
               type="password"
               autoComplete="current-password"
               variant="outlined"
+              onChange={(e) => setPassword(e.target.value)}
             />
           </FormControl>
           <Grid container>
@@ -75,6 +98,7 @@ function LoginForm(props) {
                 type="submit"
                 color="primary"
                 className={classes.submit}
+                onClick={() => console.log("pressed")}
               >
                 Log In
               </Button>

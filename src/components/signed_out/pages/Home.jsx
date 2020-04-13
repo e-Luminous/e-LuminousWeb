@@ -5,7 +5,7 @@ import {
   Button,
   Grid,
   Typography,
-  Paper
+  Paper,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import styles from "../styles/HomePageStyle";
@@ -80,7 +80,7 @@ function Home(props) {
         alignItems="center"
       >
         <Grid item xs={12} sm={6} md={4}>
-          <Paper className={classes.paper} elevation={3}>
+          <div className={classes.paper}>
             <img
               src={virtual_class}
               alt="virtual"
@@ -93,10 +93,10 @@ function Home(props) {
               This application is a copy of google classroom where teachers can
               create and students join the classroom through the unique code.
             </Typography>
-          </Paper>
+          </div>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper className={classes.paper} elevation={3}>
+          <div className={classes.paper}>
             <img src={submit} alt="submit" className={classes.featureImg} />
             <Typography variant="h4" className={classes.featureName}>
               Easy Submission
@@ -106,10 +106,10 @@ function Home(props) {
               they don't need to do the submission manually and teachers don't
               need to check manually all of the papers
             </Typography>
-          </Paper>
+          </div>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper className={classes.paper} elevation={3}>
+          <div className={classes.paper}>
             <img
               src={responsive}
               alt="responsive"
@@ -122,10 +122,10 @@ function Home(props) {
               This applications is made with Material Design and made sure to be
               responsive. It can be used in desktop, tab and any devices easily.
             </Typography>
-          </Paper>
+          </div>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Paper className={classes.paper} elevation={3}>
+          <div className={classes.paper}>
             <img
               src={notification}
               alt="notification"
@@ -139,7 +139,7 @@ function Home(props) {
               homework. So students won't miss anything and do the labwork on
               time.
             </Typography>
-          </Paper>
+          </div>
         </Grid>
       </Grid>
     </div>

@@ -1,84 +1,83 @@
 const foregroundColor = "#487EDC";
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   grow: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   logo: {
     maxWidth: 160,
-    marginTop: "5px"
+    marginTop: "5px",
   },
   button: {
     margin: ".5rem",
     fontFamily: "Rubik",
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   btnLink: {
-    textDecoration: "none"
+    textDecoration: "none",
   },
   headerSection: {
     height: "80vh",
     [theme.breakpoints.up("md")]: {
-      margin: theme.spacing(6)
-    }
+      margin: theme.spacing(6),
+    },
   },
   homeTitle: {
     marginTop: "1rem",
     color: foregroundColor,
     fontFamily: "Sen",
     padding: "2rem",
-    marginBottom: "2rem"
+    marginBottom: "2rem",
   },
   headingImg: {
     height: "auto",
     width: "15rem",
     [theme.breakpoints.up("sm")]: {
-      width: "20rem"
+      width: "20rem",
     },
     [theme.breakpoints.up("md")]: {
-      width: "28rem"
+      width: "28rem",
     },
     [theme.breakpoints.up("lg")]: {
-      width: "35rem"
-    }
+      width: "35rem",
+    },
   },
   featureHeading: {
     marginBottom: "2rem",
-    fontFamily: "Sen"
+    fontFamily: "Sen",
   },
   labsvg: {
     height: "auto",
     maxWidth: "15rem",
     [theme.breakpoints.up("sm")]: {
       height: "auto",
-      maxWidth: "20rem"
+      maxWidth: "20rem",
     },
     [theme.breakpoints.up("md")]: {
       height: "auto",
-      maxWidth: "30rem"
-    }
+      maxWidth: "30rem",
+    },
   },
 
   homeDescription: {
     color: "#212121",
-    letterSpacing: "2px"
+    letterSpacing: "2px",
   },
   paper: {
     padding: ".5rem",
     margin: "1rem",
-    borderRadius: ".7rem"
   },
   featureImg: {
     height: "200px",
-    maxWidth: "200px !important"
+    maxWidth: "200px !important",
   },
   featureName: {
     color: "#487EDC",
-    marginBottom: "1rem"
-  }
+    marginBottom: "1rem",
+  },
 });
 
 export default styles;
